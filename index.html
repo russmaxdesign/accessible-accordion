@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Accordion Example | WAI-ARIA Authoring Practices 1.1</title>
+    <link rel="stylesheet" href="assets/css/accordion.css">
+    <script src="assets/js/examples.js"></script>
+    <script src="assets/js/highlight.pack.js"></script>
+    <script src="assets/js/app.js"></script>
+  </head>
+  <body screen_capture_injected="true">
+    <h1>Accordion Example</h1>
+    <p>Dummy link <a href="#">before</a></p>
+    <div id="accordionGroup" class="Accordion" data-allow-toggle>
+      <h3>
+        <button aria-expanded="false" class="Accordion-trigger" aria-controls="sect1" id="accordion1id" type="button">
+          <span class="Accordion-title">Personal Information</span><span class="Accordion-icon"></span>
+        </button>
+      </h3>
+      <div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel" hidden>
+        <div>Something here with a <a href="#">link</a></div>
+      </div>
+      <h3>
+        <button aria-expanded="false" class="Accordion-trigger" aria-controls="sect2" id="accordion2id" type="button">
+          <span class="Accordion-title">Billing Address</span><span class="Accordion-icon"></span>
+        </button>
+      </h3>
+      <div id="sect2" role="region" aria-labelledby="accordion2id" class="Accordion-panel" hidden>
+        <div>Something here with a <a href="#">link</a></div>
+      </div>
+      <h3>
+        <button aria-expanded="false" class="Accordion-trigger" aria-controls="sect3" id="accordion3id" type="button">
+          <span class="Accordion-title">Shipping Address</span><span class="Accordion-icon"></span>
+        </button>
+      </h3>
+      <div id="sect3" role="region" aria-labelledby="accordion3id" class="Accordion-panel" hidden>
+        <div>Something here with a <a href="#">link</a></div>
+      </div>
+    </div>
+    <p>Dummy link <a href="#">after</a></p>
+    <script src="assets/js/accordion.js"></script>
+  </body>
+</html>

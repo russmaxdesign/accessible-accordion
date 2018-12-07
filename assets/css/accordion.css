@@ -1,0 +1,96 @@
+body {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 20px;
+  color: #000;
+  background: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 170%;
+}
+
+h3 {
+  font-size: 120%;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.Accordion {
+  border-bottom: 1px solid #ccc;
+}
+
+.Accordion-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  padding: .8em .5em;
+  color: hsl(0, 0%, 13%);
+  background: none;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: left;
+  font-weight: bold;
+}
+
+.Accordion :first-child .Accordion-trigger {
+}
+
+.Accordion h3:last-of-type > .Accordion-trigger{
+}
+
+.Accordion-trigger:focus,
+.Accordion-trigger:hover {
+  background: hsl(0, 0%, 93%);
+}
+
+.Accordion-title {
+  display: block; /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8295099/ */
+  pointer-events: none;
+}
+
+.Accordion-icon {
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  width: .5rem;
+  height: .5rem;
+  border: solid hsl(0, 0%, 62%);
+  border-width: 0 2px 2px 0;
+  pointer-events: none;
+
+  transform: translateY(-60%) rotate(45deg);
+}
+
+.Accordion-trigger:focus .Accordion-icon,
+.Accordion-trigger:hover .Accordion-icon {
+  border-color: hsl(0, 0%, 13%);
+}
+
+.Accordion-trigger[aria-expanded='true'] .Accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.Accordion-panel {
+  margin: 0;
+  padding: .8em .5em;
+
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.Accordion-panel[hidden] {
+  display: none;
+}
